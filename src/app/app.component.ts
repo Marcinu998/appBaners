@@ -34,6 +34,7 @@ export class AppComponent {
     'black',
   ];
 
+  // tslint:disable-next-line: typedef
   getBannerStyles() {
     return {
       width: `${this.width}px`,
@@ -42,11 +43,13 @@ export class AppComponent {
     };
   }
 
+  // tslint:disable-next-line: typedef
   setLayout(selectedLayout: string) {
     Object.keys(this.layout).forEach(key => (this.layout[key] = false));
     this.layout[selectedLayout] = true;
   }
 
+  // tslint:disable-next-line: typedef
   saveImage(element: HTMLDivElement) {
     domtoimage.toBlob(element).then(blob => saveAs(blob));
   }
